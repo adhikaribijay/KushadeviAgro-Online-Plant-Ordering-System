@@ -1,0 +1,165 @@
+/* **************************************** */
+/* HEADER */
+/* **************************************** */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4.8rem;
+  height: 8rem;
+  background-color: #d5e8d8;
+}
+.header .logo {
+  height: 2.4rem;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+  padding: 0.8rem 0;
+  border-bottom: 3px solid transparent;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  border-bottom: 3px solid #226e32;
+}
+/* **************************************** */
+/* HERO SECTION */
+/* **************************************** */
+.section-hero {
+  background-color: #d5e8d8;
+  padding: 4.8rem 0 9.6rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img-box {
+  position: relative;
+}
+
+.hero-img {
+  width: 70%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.hero-img-box:hover .hero-img:not(:hover) {
+  transform: scale(0.95);
+}
+
+.hero-img-1 {
+  right: 9rem;
+  top: 0;
+  z-index: 5;
+}
+.hero-img-2 {
+  left: -8rem;
+  bottom: -5rem;
+}
+.hero-img-3 {
+  right: 0;
+  bottom: 6rem;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.75s ease-out 0.02s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* **************************************** */
+/* FEATURES SECTION */
+/* **************************************** */
+.section-features {
+  padding: 9.6rem 0;
+  /* background-color: #eaf3ec; */
+  background: linear-gradient(to right, #faffd1, #a1ffce);
+}
+
+
+.feature-icon {
+  display: inline-block;
+  color: #2b8a3e;
+  height: 5.2rem;
+  width: 5.2rem;
+  background-color: #eaf3ec;
+  margin-bottom: 3.2rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+/* **************************************** */
+/* PRODUCTS SECTION */
+/* **************************************** */
+.section-featured-products {
+  padding: 9.6rem 0;
+  background-color: #eaf3ec;
+}
+
+/* **************************************** */
+/* ABOUT PAGE */
+/* **************************************** */
+.section-about {
+  padding: 9.6rem 0;
+  background: linear-gradient(to left, #faffd1, #a1ffce);
+}
+
+.about {
+  padding: 0 2.4rem;
+}
+
+.about-img {
+  width: 100%;
+}
+
+.about-text {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}

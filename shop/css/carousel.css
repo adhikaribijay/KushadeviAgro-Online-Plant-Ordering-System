@@ -1,0 +1,44 @@
+.carousel {
+  margin: 0 auto;
+  position: relative;
+  width: 92%;
+}
+
+.slides {
+  display: flex;
+  aspect-ratio: 1/1;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 2px;
+}
+.slides::-webkit-scrollbar {
+  display: none;
+}
+.slides-item {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.carousel-nav {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.slider-nav {
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.slider-nav:hover,
+.slider-nav:active {
+  border: 1px solid #2b8a3e;
+}
+
+.slider-nav img{
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+}

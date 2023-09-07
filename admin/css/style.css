@@ -1,0 +1,439 @@
+/* REUSABLE STYLING*/
+.table-container {
+  padding: 0 0.8rem;
+  height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background: #2b8a3e;
+  color: #fff;
+}
+
+tr,
+th,
+td {
+  border: 1px solid #d6d6d6;
+  font-size: 1.6rem;
+  padding: 1.2rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+.action-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.insert-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.8rem;
+}
+
+.insert-form label {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.insert-form input {
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 1rem;
+  outline: none;
+}
+
+/* For image upload icon and related styling*/
+.upload-icon {
+  width: 9.6rem;
+  height: 9.6rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  color: #ccc;
+  border-radius: 50%;
+  padding: 2.4rem;
+  z-index: 999;
+}
+
+.upload-icon:hover{
+  color: #555;
+  background-color: #e6e6e6;
+}
+
+.reposition {
+  position: absolute;
+}
+
+input[type="file"] {
+  display: none;
+}
+/* Admin login form */
+.form-container {
+  width: 40%;
+  padding: 0.6rem 4.8rem;
+  padding: 4.8rem 4.8rem 9.6rem;
+  box-shadow: 0.2rem 0.2rem 1.5rem rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head img {
+  margin-bottom: 1.4rem;
+}
+
+.admin-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.8rem;
+  /* padding-top: 2.4rem; */
+}
+
+.admin-form label {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.admin-form input:not(input[type="file"]) {
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 1rem;
+  outline: none;
+}
+
+.admin-form textarea {
+  font-family: inherit;
+  font-size: 1.8rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.switch-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch-block p {
+  font-size: 1.5rem;
+}
+
+.switch-block a:link,
+.switch-block a:visited {
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+.switch-block a:hover,
+.switch-block a:active {
+  color: #2b8a3e;
+}
+
+.color-red {
+  color: red;
+}
+
+.error-msg {
+  font-size: 1.6rem;
+}
+
+/* **************************************** */
+/* HEADER */
+/* **************************************** */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.8rem;
+  background-color: #fff;
+}
+
+.logo {
+  height: 1.8rem;
+}
+
+.head-main-menu {
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.head-menu-link {
+  display: flex;
+  font-size: 1.8rem;
+  color: inherit;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+  padding: 2rem 1.4rem;
+  border-bottom: solid 2px transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.head-menu-link:hover {
+  color: #2b8a3e;
+}
+
+.head-main-menu:hover .head-sub-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.head-menu-link:hover,
+.head-menu-link:active > .head-sub-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.adm-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.head-sub-menu {
+  padding: 0.4rem;
+  line-height: 1.8;
+  font-size: 1.4rem;
+  list-style: none;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.head-sub-link:link,
+.head-sub-link:visited {
+  padding: 1.2rem;
+  display: block;
+  color: #555;
+  line-height: 1;
+  transition: all 0.3s;
+}
+.head-sub-link:hover,
+.head-sub-link:active {
+  color: #2b8a3e;
+}
+
+/* **************************************** */
+/* SIDEBAR */
+/* **************************************** */
+
+.sidebar {
+  height: 90vh;
+  padding: 1.2rem 1.2rem 0.4rem;
+  overflow-y: auto;
+}
+.sidebar-main-list,
+.sidebar-sub-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.sidebar-main-list {
+  gap: 1rem;
+}
+
+.cb-toggle {
+  display: none;
+}
+
+.cb-toggle:checked ~ .sidebar-sub-list {
+  display: flex;
+}
+
+.cb-toggle:checked ~ label .chev-down {
+  transform: rotate(180deg);
+}
+
+.main-menu {
+  position: relative;
+}
+
+.toggle-label {
+  display: inline-block;
+  padding: 2.4rem;
+}
+
+.chev-down:hover {
+  color: #555 !important;
+}
+
+label[for^="toggle"]:hover .chev-down {
+  color: #fff;
+}
+
+.chev-down {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+  color: #2b8a3e;
+}
+
+.sidebar-main-list .btn {
+  display: block;
+}
+
+.sidebar-sub-list {
+  gap: 0.2rem;
+  margin-top: 0.2rem;
+  display: none;
+}
+
+.sidebar-sub-list li {
+  font-size: 1.8rem;
+  margin-left: 2.4rem;
+}
+
+.sidebar-sub-list a {
+  line-height: 0.4rem;
+}
+
+/* SECTION ADMIN  DASHBOARD */
+.section-title {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.admin-dashboard {
+  background: #eaf3ec;
+  padding: 1.2rem 0;
+}
+
+.admin-container {
+  padding: 1.2rem;
+}
+
+.info-boxes {
+  grid-auto-rows: 1fr;
+}
+
+.dashboard-info-box {
+  padding: 2.4rem;
+  background-color: #bfdcc5;
+  border: 1px solid #409651;
+  transition: all 0.3s;
+  box-shadow: -0.5rem 0rem 0rem rgba(0, 0, 0, 0.8);
+}
+
+.dashboard-info-box > [class^="heading"] {
+  color: #2b8a3e;
+}
+
+.dashboard-info-box:hover {
+  background-color: #2b8a3e;
+  box-shadow: -1rem -1rem 0rem rgba(0, 0, 0, 0.8);
+}
+
+.dashboard-info-box:hover > [class^="heading"] {
+  color: #fff;
+}
+
+/* SECTION CATEGORY (MAIN and SUB both)*/
+.generic-section {
+  padding: 1.2rem 0;
+  background-color: #f0f7f2;
+}
+.generic-container {
+  padding: 1.2rem;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-head .btn {
+  align-self: flex-start;
+}
+
+/* FOR PRODUCT VIEW*/
+/* FOR PRODUCT ADD FORM */
+.insert-form-container {
+  width: 60%;
+}
+
+#sub-cat-box {
+  display: none;
+}
+
+.other-photos {
+  display: flex;
+  column-gap: 1.8rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-container{
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+  margin-bottom: 1.8rem;
+  background-color: #e6e6e6;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.product-img + .btn{
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+
+/* FOR ORDER DETAILS PAGE */
+.order-item-container {
+  max-height: 38vh;
+  overflow-y: auto;
+}
+
+.utility-box {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.5);
+  border-left: 4px solid #2b8a3e;
+  padding: 1.8rem;
+  margin-top: 4.8rem;
+  border-radius: 5px;
+}
+
+.utility-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.utility-text span {
+  font-weight: 700;
+}
+
+.customer-info-box {
+  flex: 0 1 22rem;
+}

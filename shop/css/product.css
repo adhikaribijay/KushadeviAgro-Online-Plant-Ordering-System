@@ -1,0 +1,73 @@
+/* This is css file mainly for product card i.e the individual product box*/
+/* This css file is not related to product.php page, which is basically individual product page*/
+.product-image {
+  position: relative;
+}
+
+.product-image:hover .product-img {
+  filter: blur(3px) brightness(75%);
+  transform: translateY(1.1rem);
+  transform: scale(1.03);
+}
+
+.product-image:hover .product-view {
+  bottom: 50%;
+  opacity: 1;
+}
+
+.product-img {
+  height: 26.8rem;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s;
+  border-radius: 2px;
+}
+/* For product images of landing page */
+.section-featured-products .product-img {
+  min-height: 32rem;
+}
+
+.product-view {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  color: #fff;
+  font-size: 1.8rem;
+  text-align: center;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.product-view-link:link,
+.product-view-link:visited {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 3px;
+  color: inherit;
+  transition: all 0.3s;
+}
+
+.product-view-link:hover,
+.product-view-link:active {
+  color: #d5e8d8;
+}
+
+.product-info-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.12rem;
+}
+
+.product-name,
+.product-price {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.product-cat {
+  font-size: 1.6rem;
+}
