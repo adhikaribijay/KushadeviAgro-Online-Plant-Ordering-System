@@ -22,9 +22,7 @@ $result = mysqli_query($conn, $query);
         <a href="shop" class="btn btn-full btn-big btn-animated">Order now</a>
       </div>
       <div class="hero-img-box">
-        <img src="img/plant-collection.avif" alt="Greenhouse with lots of plants in polybag" class="hero-img hero-img-1" />
-        <img src="img/plant-generic.jpg" alt="Some plant" class="hero-img hero-img-2" />
-        <img src="img/plant-tray.jpg" alt="Small plants in tray" class="hero-img hero-img-3" />
+        <img src="img/hero.png" alt="Plant collection" class="hero-img " />
       </div>
     </div>
   </section>

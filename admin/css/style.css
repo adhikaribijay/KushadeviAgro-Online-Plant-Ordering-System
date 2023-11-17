@@ -217,6 +217,7 @@ input[type="file"] {
   right: 0;
   visibility: hidden;
   opacity: 0;
+  z-index: 100;
 }
 
 .head-sub-link:link,
@@ -436,4 +437,59 @@ label[for^="toggle"]:hover .chev-down {
 
 .customer-info-box {
   flex: 0 1 22rem;
+}
+
+
+/* **************************************** */
+/* MEDIA QUERIES */
+/* **************************************** */
+@media only screen and (max-width: 1085px) {
+  .dashboard-info-box{
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .form-container{
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: none;
+  }
+
+  .head img{
+    display: none;
+  }
+
+  .admin-dashboard{
+    background: none;
+  }
+
+  .grid-2-cols-unequal-big{
+    grid-template-columns:  1fr;
+  }
+
+  .sidebar{
+    height: auto;
+    width: 98vw;
+    overflow: none;
+  }
+
+  .generic-container{
+    width: 98vw;
+  }
+
+  .btn-small{
+    font-size: 1.6rem;
+  }
+
+  .grid-gap-sm{
+    gap: 1.8rem;
+  }
+
+  .grid-gap-md{
+    gap: 1.2rem;
+  }
+
 }

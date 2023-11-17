@@ -8,9 +8,6 @@ if (!isset($_SESSION["admin"])) {
 
 <?php
 if (isset($_POST["add"])) {
-  echo "<pre>";
-  print_r($_FILES);
-  echo "</pre>";
   $error_msg = "";
   $has_sub_cat = 0;
   $valid = 1;

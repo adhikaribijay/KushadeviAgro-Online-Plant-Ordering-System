@@ -6,4 +6,4 @@
 </body>
 
 </html>
-<?php mysqli_close($conn); ?>
+<?php  if(isset($conn)) mysqli_close($conn); ?>
